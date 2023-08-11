@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 
     //Criacao de variavel.
 
+    //velocidade de movimento
+    public float speed = 1;
+
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -23,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX,0.0f ,movementY);
-        rb.AddForce(movement);
+        rb.AddForce(movement * speed);
     }
 
     //Funcao sem retorno, apenas executa uma tarefa
