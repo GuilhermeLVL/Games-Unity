@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     //velocidade de movimento
     public float speed = 1;
     public TextMeshProUGUI pointsText;
+    public GameObject WinText;
+    public int totalPoints;
 
     private int points;
 
@@ -60,5 +62,8 @@ public class PlayerController : MonoBehaviour
     void SetPointsTesxt()
     {
         pointsText.text = "Points: " + points;
+        if (points >= totalPoints) { 
+        WinText.SetActive(true);
+        }
     }
 }
