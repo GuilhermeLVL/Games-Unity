@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     //velocidade de movimento
     public float speed = 1;
 
+    private int points;
+
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -20,7 +22,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();   
+        points = 0;
     }
 
     private void FixedUpdate()
@@ -41,7 +45,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Pickup"))
         {
+            points++;
             other.gameObject.SetActive(false);
+
+            Debug.Log(points);
         }
     }
 }
