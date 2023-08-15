@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     //velocidade de movimento
     public float speed = 1;
+    public TextMeshProUGUI pointsText;
 
     private int points;
 
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();   
         points = 0;
+        SetPointsTesxt();
     }
 
     private void FixedUpdate()
@@ -36,7 +39,7 @@ public class PlayerController : MonoBehaviour
     //Funcao sem retorno, apenas executa uma tarefa
      void OnMove(InputValue movementValue)
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
+        Vector2 movementVector = movementValue.Get<Vector2>();  
         movementX = movementVector.x;
         movementY = movementVector.y;
     }
@@ -46,9 +49,16 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Pickup"))
         {
             points++;
+
+            SetPointsTesxt();
             other.gameObject.SetActive(false);
 
             Debug.Log(points);
         }
+    }
+
+    void SetPointsTesxt()
+    {
+        pointsText.text = "Points: " + points;
     }
 }
