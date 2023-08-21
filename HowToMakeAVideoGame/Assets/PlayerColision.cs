@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class PlayerColision : MonoBehaviour
 {
+    public PlayerMoviment moviment;
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collisionInfo)
     {
-        Debug.Log("vOCE BATEU EM ALGO");
+      if (collisionInfo.collider.tag == "Obstaculo") 
+        {
+            moviment.enabled = false;
+        }
     }
 }
