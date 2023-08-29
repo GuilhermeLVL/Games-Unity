@@ -9,6 +9,8 @@ public class Spwaner : MonoBehaviour
 
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
+    public float decreseTime;
+    public float minTime = 0.65f;
 
     private void Update()
     {
@@ -16,6 +18,12 @@ public class Spwaner : MonoBehaviour
         {
             Instantiate(obstacle, transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
+
+            if(startTimeBtwSpawn >= minTime)
+            {
+                startTimeBtwSpawn -= decreseTime;
+            }
+            
         }
         else
         {
