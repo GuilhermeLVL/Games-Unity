@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spwaner : MonoBehaviour
 {
 
-    public GameObject obstacle;
+    public GameObject[] obstaclePtterns;
 
     private float timeBtwSpawn;
     public float startTimeBtwSpawn;
@@ -16,7 +16,8 @@ public class Spwaner : MonoBehaviour
     {
         if (timeBtwSpawn <= 0)
         {
-            Instantiate(obstacle, transform.position, Quaternion.identity);
+            int rand = Random.Range(0, obstaclePtterns.Length);
+            Instantiate(obstaclePtterns[rand], transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
 
             if(startTimeBtwSpawn >= minTime)
