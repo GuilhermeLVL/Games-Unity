@@ -5,7 +5,16 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public int damage = 1;
-     void OnTriggerEnter2D(Collider2D other) 
+    public float speed;
+    
+
+    private void Update()
+    {
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.CompareTag("Player"))
         {

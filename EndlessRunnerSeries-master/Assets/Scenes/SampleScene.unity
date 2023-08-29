@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 40761512}
   m_Layer: 0
   m_Name: Ghost_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,6 +160,7 @@ MonoBehaviour:
   speed: 100
   maxHeight: 5
   minHeight: -5
+  health: 3
 --- !u!95 &40761509
 Animator:
   serializedVersion: 5
@@ -381,7 +382,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.028844
+  orthographic size: 20.443615
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -423,6 +424,7 @@ GameObject:
   - component: {fileID: 992264123}
   - component: {fileID: 992264122}
   - component: {fileID: 992264124}
+  - component: {fileID: 992264125}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -491,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 992264121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 1.03, z: 0}
+  m_LocalPosition: {x: 19.49, y: 0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,6 +534,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3.47
+--- !u!114 &992264125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992264121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8b856cf2d805d46a842f128f64bb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  speed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
