@@ -20,7 +20,7 @@ public class Spwaner : MonoBehaviour
             Instantiate(obstaclePtterns[rand], transform.position, Quaternion.identity);
             timeBtwSpawn = startTimeBtwSpawn;
 
-            if(startTimeBtwSpawn >= minTime)
+            if(startTimeBtwSpawn > minTime)
             {
                 startTimeBtwSpawn -= decreseTime;
             }
