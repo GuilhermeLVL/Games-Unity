@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Player : MonoBehaviour { 
@@ -19,6 +21,12 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         // Move o player para o centro da tela com a velocidade da variavel speed
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
