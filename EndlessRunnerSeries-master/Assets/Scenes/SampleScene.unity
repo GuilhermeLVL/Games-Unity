@@ -243,7 +243,7 @@ Transform:
   m_GameObject: {fileID: 40761507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +319,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!1 &475096238
 GameObject:
@@ -447,7 +447,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.258404
+  orthographic size: 18.24178
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -472,13 +472,13 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4205008172474639160
+--- !u!1001 &1133015433
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -528,7 +528,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7150931384534090990, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
       propertyPath: m_Name
-      value: Obstacule Efect
+      value: Player Efect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172069811919831877, guid: 07cad8791a863104f859cd1c0683b4f7, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -542,4 +570,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 40761511}
   - {fileID: 475096240}
-  - {fileID: 4205008172474639160}
+  - {fileID: 1133015433}
