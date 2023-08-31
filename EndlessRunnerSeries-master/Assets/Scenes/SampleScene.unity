@@ -162,7 +162,6 @@ MonoBehaviour:
   minHeight: -5
   health: 3
   effect: {fileID: 5315985990777368253, guid: 823f7e967c317b042a2b15c7bb929926, type: 3}
-  camAnim: {fileID: 519420033}
 --- !u!95 &40761509
 Animator:
   serializedVersion: 5
@@ -489,7 +488,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0c37eac2d2160c849a625c3ca8dc778a, type: 2}
   m_CullingMode: 0
