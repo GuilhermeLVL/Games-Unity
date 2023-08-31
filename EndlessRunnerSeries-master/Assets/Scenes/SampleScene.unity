@@ -162,7 +162,7 @@ MonoBehaviour:
   minHeight: -5
   health: 3
   effect: {fileID: 5315985990777368253, guid: 823f7e967c317b042a2b15c7bb929926, type: 3}
-  camAnim: {fileID: 0}
+  camAnim: {fileID: 519420033}
 --- !u!95 &40761509
 Animator:
   serializedVersion: 5
