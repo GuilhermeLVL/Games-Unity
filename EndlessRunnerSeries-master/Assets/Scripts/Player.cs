@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Player : MonoBehaviour { 
@@ -21,6 +21,8 @@ public class Player : MonoBehaviour {
 
     public GameObject effect;
 
+    public TextMeshProUGUI healthDisplay;
+
     private CamerShaker _camerShaker;
 
     void Start()
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+
+        healthDisplay.text = health.ToString();
 
         if(health <= 0)
         {
