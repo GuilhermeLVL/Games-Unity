@@ -25,6 +25,8 @@ public class Player : MonoBehaviour {
 
     private CamerShaker _camerShaker;
 
+    public GameObject gameOver;
+
     void Start()
     {
         _camerShaker = FindObjectOfType(typeof(CamerShaker)) as CamerShaker;
@@ -37,7 +39,8 @@ public class Player : MonoBehaviour {
 
         if(health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameOver.SetActive(true);
+            Destroy(gameObject);
         }
 
         // Move o player para o centro da tela com a velocidade da variavel speed
