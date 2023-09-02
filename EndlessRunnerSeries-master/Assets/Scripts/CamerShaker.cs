@@ -22,6 +22,16 @@ public class CamerShaker : MonoBehaviour
     void StartCameraShaking()
     {
 
+        //Gera valor aleatorio para o eixo X e Y
+        float cameraShakingOffSetX = Random.value * shakeMagnitude * 2 - shakeMagnitude;
+        float cameraShakingOffSetY = Random.value * shakeMagnitude * 2 - shakeMagnitude;
+
+        //Armazena os valores gerados acima
+        Vector3 cameraIntermediatePosition = mainCamera.transform.position;
+
+        cameraIntermediatePosition.x += cameraShakingOffSetX;
+        cameraIntermediatePosition.y += cameraShakingOffSetY;
+        mainCamera.transform.position = cameraIntermediatePosition;
     }
 
     void StopCameraShaking()
