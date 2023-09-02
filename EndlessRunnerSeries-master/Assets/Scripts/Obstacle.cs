@@ -8,8 +8,13 @@ public class Obstacle : MonoBehaviour
     public float speed;
 
     public GameObject effect;
-    
-    
+    private CamerShaker _camerShaker;
+
+
+    void Start()
+    {
+        _camerShaker = FindObjectOfType(typeof(CamerShaker)) as CamerShaker;
+    }
 
     private void Update()
     {
@@ -24,6 +29,7 @@ public class Obstacle : MonoBehaviour
             
             Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<Player>().health -= damage;
+            _camerShaker.ShakeIt();
 
             Destroy(gameObject);
         }
