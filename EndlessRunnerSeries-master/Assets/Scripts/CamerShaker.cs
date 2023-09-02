@@ -37,6 +37,8 @@ public class CamerShaker : MonoBehaviour
     void StopCameraShaking()
     {
 
+        CancelInvoke("StartCameraShaking");
+        mainCamera.transform.position = cameraInitialPosition;
     }
     
 }
