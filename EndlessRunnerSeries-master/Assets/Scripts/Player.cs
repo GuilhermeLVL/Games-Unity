@@ -20,7 +20,14 @@ public class Player : MonoBehaviour {
     public int health = 6;
 
     public GameObject effect;
-    
+
+    private CamerShaker _camerShaker;
+
+    void Start()
+    {
+        _camerShaker = FindObjectOfType(typeof(CamerShaker)) as CamerShaker;
+    }
+
     void Update()
     {
 
@@ -37,14 +44,14 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxHeight)
         {
             Instantiate(effect, transform.position, Quaternion.identity);
-            
+            _camerShaker.ShakeIt();
             targetPos = new Vector2(transform.position.x, transform.position.y + Yincrement);
             transform.position = targetPos;
 
         } else if (Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minHeight)
     {
             Instantiate(effect, transform.position, Quaternion.identity);
-            
+            _camerShaker.ShakeIt();
             targetPos = new Vector2(transform.position.x, transform.position.y - Yincrement);
             transform.position = targetPos;
         }
