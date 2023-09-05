@@ -23,6 +23,17 @@ public class Player : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(new Vector3(HorizontalInput * forceMultiplier,0,0));
 
         }
-        
+
+
+
+     
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Hazard"))
+        {
+
+            Destroy(gameObject);  
+        }
     }
 }
