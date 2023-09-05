@@ -17,7 +17,10 @@ public class GameManager : MonoBehaviour
     {
 
         var x = Random.Range(-7, 7);
-        Instantiate(hazardPrefab, new Vector3(x, 11, 0), Quaternion.identity);
+        var drag = Random.Range(0f, 2f);
+
+        var hazard =  Instantiate(hazardPrefab, new Vector3(x, 11, 0), Quaternion.identity);
+        hazard.GetComponent<Rigidbody>().drag = drag;
 
         yield return new WaitForSeconds (1f);
 
