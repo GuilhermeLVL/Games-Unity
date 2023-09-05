@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject hazardPrefab;
+
     void Start()
     {
-        
+
+        StartCoroutine(SpawnHazards());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator SpawnHazards()
     {
-        
+        Instantiate(hazardPrefab, new Vector3(0, 11, 0), Quaternion.identity);
+
+        yield return null;
     }
 }
