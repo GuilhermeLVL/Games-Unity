@@ -15,8 +15,12 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnHazards()
     {
-        Instantiate(hazardPrefab, new Vector3(0, 11, 0), Quaternion.identity);
 
-        yield return null;
+        var x = Random.Range(-7, 7);
+        Instantiate(hazardPrefab, new Vector3(x, 11, 0), Quaternion.identity);
+
+        yield return new WaitForSeconds (1f);
+
+        yield return SpawnHazards();
     }
 }
