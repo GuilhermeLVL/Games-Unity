@@ -12,10 +12,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        StartCoroutine(SpawnHazards());
+       // StartCoroutine(SpawnHazards());
+        InvokeRepeating("SpawnHazards", 0,1f);
     }
 
-    private IEnumerator SpawnHazards()
+    private void SpawnHazards()
     {
         var hazardToSpawn = Random.Range(1,maxHazardsToSpawn);
 
@@ -31,8 +32,8 @@ public class GameManager : MonoBehaviour
 
        
 
-        yield return new WaitForSeconds (1f);
+        //yield return new WaitForSeconds (1f);
 
-        yield return SpawnHazards();
+        //yield return SpawnHazards();
     }
 }
