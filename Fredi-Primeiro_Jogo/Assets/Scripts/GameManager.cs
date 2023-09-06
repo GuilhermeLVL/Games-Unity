@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject hazardPrefab;
 
+    public int maxHazardsToSpawn = 4;
+
     void Start()
     {
 
@@ -15,12 +17,19 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SpawnHazards()
     {
+        var hazardToSpawn = Random.Range(1,maxHazardsToSpawn);
 
-        var x = Random.Range(-7, 7);
-        var drag = Random.Range(0f, 2f);
+        for (int i = 0; i < hazardToSpawn; i++)
+        {
 
-        var hazard =  Instantiate(hazardPrefab, new Vector3(x, 11, 0), Quaternion.identity);
-        hazard.GetComponent<Rigidbody>().drag = drag;
+            var x = Random.Range(-7, 7);
+            var drag = Random.Range(0f, 2f);
+
+            var hazard = Instantiate(hazardPrefab, new Vector3(x, 11, 0), Quaternion.identity);
+            hazard.GetComponent<Rigidbody>().drag = drag;
+        }
+
+       
 
         yield return new WaitForSeconds (1f);
 
