@@ -875,9 +875,9 @@ MonoBehaviour:
   - {fileID: 6825573992828134061, guid: fa6cf6a1969974048b9db9eb6773d05e, type: 3}
   - {fileID: 5833785271384812633, guid: 2b460fa03c180874d8cae0bc5a799a7a, type: 3}
   - {fileID: 4620286888916732340, guid: f9522f0d78ea95d4588cc28fc9b054db, type: 3}
-  startTimeBtwSpawn: 5
+  startTimeBtwSpawn: 2
   decreseTime: 0.5
-  minTime: 8
+  minTime: 4
 --- !u!114 &475096242
 MonoBehaviour:
   m_ObjectHideFlags: 0
