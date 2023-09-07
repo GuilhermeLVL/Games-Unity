@@ -9,6 +9,32 @@ public class GameManager : MonoBehaviour
 
     public int maxHazardsToSpawn = 4;
 
+    public TMPro.TextMeshPro scoreText;
+
+
+    private int score;
+    private float timer;
+    private static bool gameOver;
+
+    private void Update()
+    {
+
+        if (gameOver)
+            return;
+
+
+        timer += Time.deltaTime;
+
+        if(timer >= 1f ) 
+        
+        {
+            score++;
+            scoreText.text = score.ToString();
+            timer = 0;
+        }
+       
+    }
+
     void Start()
     {
 
@@ -35,5 +61,10 @@ public class GameManager : MonoBehaviour
         //yield return new WaitForSeconds (1f);
 
         //yield return SpawnHazards();
+    }
+
+    public static void GameOver()
+    {
+        gameOver = true;
     }
 }
