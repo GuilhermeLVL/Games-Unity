@@ -11252,6 +11252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceMultiplier: 9
   maximumVelocity: 3
+  deathParticles: {fileID: 1963749011601917773, guid: 8f1c18af9d9deef4b8c2184634816855, type: 3}
 --- !u!1001 &541587299
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18798,6 +18799,7 @@ Transform:
   - {fileID: 1742113435}
   - {fileID: 644598200}
   - {fileID: 725674399}
+  - {fileID: 1824674961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &885937519
@@ -35464,7 +35466,7 @@ GameObject:
   - component: {fileID: 1824674960}
   - component: {fileID: 1824674959}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: 'ArParticle '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40273,12 +40275,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824674958}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.23, z: 2.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.99, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 885074382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1826137970 stripped
 Transform:
@@ -46020,6 +46022,5 @@ SceneRoots:
   - {fileID: 540394189}
   - {fileID: 963283671}
   - {fileID: 885074382}
-  - {fileID: 1824674961}
   - {fileID: 772971786}
   - {fileID: 544362966}
