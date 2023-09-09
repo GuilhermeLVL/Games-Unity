@@ -6,6 +6,8 @@ public class hazard : MonoBehaviour
 {
     Vector3 rotation;
 
+    public ParticleSystem breakingEffect;
+
     private void Start()
     {
         var xRotation = Random.Range(0.5f,1f);
@@ -20,5 +22,6 @@ public class hazard : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("hazard"))
         Destroy(gameObject);
+        Instantiate(breakingEffect, transform.position, Quaternion.identity);
     }
 }
