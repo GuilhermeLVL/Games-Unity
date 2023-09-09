@@ -10,7 +10,11 @@ public class Player : MonoBehaviour
     public ParticleSystem deathParticles;
 
     private Rigidbody rb;
+
+    //Importacao das cameras 
     private CinemachineImpulseSource CinemachineImpulseSource;
+    public CinemachineVirtualCamera mainVCam;
+    public CinemachineVirtualCamera zommVcam;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +42,13 @@ public class Player : MonoBehaviour
             GameManager.GameOver();
             Instantiate(deathParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
+            //Tremor
             CinemachineImpulseSource.GenerateImpulse();
+
+            //Desabilitando a camera que segue e habilitando a camera de morte/zom
+            mainVCam.gameObject.SetActive(false);
+            zommVcam.gameObject.SetActive(true);
         }
     }
 }
