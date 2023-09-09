@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class Player : MonoBehaviour
     public ParticleSystem deathParticles;
 
     private Rigidbody rb;
+    private CinemachineImpulseSource CinemachineImpulseSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        CinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     // Update is called once per frame
@@ -34,7 +37,8 @@ public class Player : MonoBehaviour
         {
             GameManager.GameOver();
             Instantiate(deathParticles, transform.position, Quaternion.identity);
-            Destroy(gameObject);  
+            Destroy(gameObject);
+            CinemachineImpulseSource.GenerateImpulse();
         }
     }
 }
