@@ -9,10 +9,15 @@ public class hazard : MonoBehaviour
 
     public ParticleSystem breakingEffect;
     private CinemachineImpulseSource CinemachineImpulseSource;
+    private Player Player;
 
     private void Start()
     {
         CinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
+
+        //Pega a posicao do player (Vibracao da tela)
+        Player = FindObjectOfType<Player>();
+
         var xRotation = Random.Range(0.5f,1f);
         rotation = new Vector3(-xRotation,0);
     }
@@ -27,6 +32,11 @@ public class hazard : MonoBehaviour
         Destroy(gameObject);
         Instantiate(breakingEffect, transform.position, Quaternion.identity);
 
-        CinemachineImpulseSource.GenerateImpulse();
+        //Armazena a posicao do player (Vibracao da tela)
+        var distance = Vector3.Distance(transform.position, Player.transform.position);
+        
+        var force = 1 / distance;
+
+        CinemachineImpulseSource.GenerateImpulse(force);
     }
 }
