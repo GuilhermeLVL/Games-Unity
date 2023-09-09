@@ -34,7 +34,7 @@ public class hazard : MonoBehaviour
 
         //Armazena a posicao do player (Vibracao da tela)
         var distance = Vector3.Distance(transform.position, Player.transform.position);
-        
+       
         var force = 1 / distance;
 
         CinemachineImpulseSource.GenerateImpulse(force);
