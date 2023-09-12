@@ -1,10 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    
 
     public GameObject hazardPrefab;
 
@@ -31,9 +31,16 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Escape))
-        { 
-        Time.timeScale = 0;
+      if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(Time.timeScale == 0)
+            {
+                StartCoroutine(ScaleTime(0,1,0.5f));
+            }
+            if (Time.timeScale == 1)
+            {
+                StartCoroutine(ScaleTime(1, 0, 0.5f));
+            }
         }
 
 
@@ -51,11 +58,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerable ScaleTime (float start, float end, float duration)
+  
+
+    IEnumerable ScaleTime(float start, float end, float duration)
     {
         float lastTime = Time.realtimeSinceStartup;
         float timer = 0.0f;
-        while(timer < duration) 
+        while (timer < duration)
         {
             Time.timeScale = Mathf.Lerp(start, end, timer / duration);
             Time.fixedDeltaTime = 0.2f * Time.timeScale;
@@ -64,10 +73,8 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         Time.timeScale = end;
-        Time.fixedDeltaTime =0.02f * Time.timeScale;
+        Time.fixedDeltaTime = 0.02f * end;
     }
-
-
 
     private void SpawnHazards()
     {
