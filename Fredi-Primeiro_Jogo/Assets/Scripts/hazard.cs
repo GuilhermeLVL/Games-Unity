@@ -18,13 +18,13 @@ public class hazard : MonoBehaviour
         //Pega a posicao do player (Vibracao da tela)
         Player = FindObjectOfType<Player>();
 
-        var xRotation = Random.Range(0.5f,1f);
+        var xRotation = Random.Range(90f,180f);
         rotation = new Vector3(-xRotation,0);
     }
 
     private void Update()
     {
-        transform.Rotate(rotation);
+        transform.Rotate(rotation * Time.deltaTime);
     }
     private void OnCollisionEnter(Collision collision)
     {

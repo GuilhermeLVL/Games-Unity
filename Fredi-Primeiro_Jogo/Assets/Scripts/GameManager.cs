@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,13 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        { 
+        Time.timeScale = 0;
+        }
+
+
         if (gameOver)
             return;
 
@@ -42,6 +50,24 @@ public class GameManager : MonoBehaviour
             timer = 0;
         }
     }
+
+    IEnumerable ScaleTime (float start, float end, float duration)
+    {
+        float lastTime = Time.realtimeSinceStartup;
+        float timer = 0.0f;
+        while(timer < duration) 
+        {
+            Time.timeScale = Mathf.Lerp(start, end, timer / duration);
+            Time.fixedDeltaTime = 0.2f * Time.timeScale;
+            timer += (Time.realtimeSinceStartup - lastTime);
+            lastTime = Time.realtimeSinceStartup;
+            yield return null;
+        }
+        Time.timeScale = end;
+        Time.fixedDeltaTime =0.02f * Time.timeScale;
+    }
+
+
 
     private void SpawnHazards()
     {
