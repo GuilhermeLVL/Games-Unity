@@ -33,10 +33,14 @@ public class hazard : MonoBehaviour
         Instantiate(breakingEffect, transform.position, Quaternion.identity);
 
         //Armazena a posicao do player (Vibracao da tela)
-        var distance = Vector3.Distance(transform.position, Player.transform.position);
+        if(Player != null)
+        {
+                var distance = Vector3.Distance(transform.position, Player.transform.position);
        
-        var force = 1 / distance;
+                var force = 1 / distance;
 
-        CinemachineImpulseSource.GenerateImpulse(force);
+                CinemachineImpulseSource.GenerateImpulse(force);
+        }
+       
     }
 }

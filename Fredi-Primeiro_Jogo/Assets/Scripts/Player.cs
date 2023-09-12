@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     public CinemachineVirtualCamera zommVcam;
 
     // Start is called before the first frame update
+
+
+   
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -29,7 +33,8 @@ public class Player : MonoBehaviour
         var HorizontalInput = Input.GetAxis("Horizontal");
         if (rb.velocity.magnitude <= maximumVelocity )
         {
-            rb.AddForce(new Vector3(HorizontalInput * forceMultiplier,0,0));
+            rb.AddForce(new Vector3(HorizontalInput * forceMultiplier * Time.deltaTime,0,0));
+           
 
         }
 
