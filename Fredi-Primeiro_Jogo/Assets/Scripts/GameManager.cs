@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-       // StartCoroutine(SpawnHazards());
+       //StartCoroutine(SpawnHazards());
         InvokeRepeating("SpawnHazards", 0,1f);
     }
 
