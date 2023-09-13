@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-       //StartCoroutine(SpawnHazards());
-        InvokeRepeating("SpawnHazards", 0,1f);
+       StartCoroutine(SpawnHazards());
+        
     }
 
 
@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
         {
             if(Time.timeScale == 0)
             {
-               // StartCoroutine(ScaleTime(0, 1, 0.5f));
+                StartCoroutine(ScaleTime(0, 1, 0.5f));
             }
             if (Time.timeScale == 1)
             {
-                //StartCoroutine(ScaleTime(1, 0, 0.5f));
+                StartCoroutine(ScaleTime(1, 0, 0.5f));
             }
         }
 
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
   
 
-    IEnumerable ScaleTime(float start, float end, float duration)
+    IEnumerator ScaleTime(float start, float end, float duration)
     {
         float lastTime = Time.realtimeSinceStartup;
         float timer = 0.0f;
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         Time.fixedDeltaTime = 0.02f * end;
     }
 
-    private IEnumerable SpawnHazards()
+    private IEnumerator SpawnHazards()
     {
         var hazardToSpawn = Random.Range(1,maxHazardsToSpawn);
 
