@@ -35,11 +35,11 @@ public class GameManager : MonoBehaviour
         {
             if(Time.timeScale == 0)
             {
-                StartCoroutine(ScaleTime(0, 1, 0.5f));
+               // StartCoroutine(ScaleTime(0, 1, 0.5f));
             }
             if (Time.timeScale == 1)
             {
-                StartCoroutine(ScaleTime(1, 0, 0.5f));
+                //StartCoroutine(ScaleTime(1, 0, 0.5f));
             }
         }
 
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         while (timer < duration)
         {
             Time.timeScale = Mathf.Lerp(start, end, timer / duration);
-            Time.fixedDeltaTime = 0.2f * Time.timeScale;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
             timer += (Time.realtimeSinceStartup - lastTime);
             lastTime = Time.realtimeSinceStartup;
             yield return null;
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         Time.fixedDeltaTime = 0.02f * end;
     }
 
-    private void SpawnHazards()
+    private IEnumerable SpawnHazards()
     {
         var hazardToSpawn = Random.Range(1,maxHazardsToSpawn);
 
@@ -90,11 +90,11 @@ public class GameManager : MonoBehaviour
             hazard.GetComponent<Rigidbody>().drag = drag;
         }
 
-       
+        var timeToWait = Random.Range(0.5f, 1.5f);
 
-        //yield return new WaitForSeconds (1f);
+        yield return new WaitForSeconds (timeToWait);
 
-        //yield return SpawnHazards();
+        yield return SpawnHazards();
     }
 
     public static void GameOver()
