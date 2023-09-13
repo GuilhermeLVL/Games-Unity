@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class lerp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float A;
+    public float B;
+    public float t;
+
+    public float LerpValue;
+
 
     // Update is called once per frame
     void Update()
     {
-        
+     
+    LerpValue = Mathf.Lerp(A, B, t);
     }
 }

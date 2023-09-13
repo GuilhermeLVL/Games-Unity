@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         {
             if(Time.timeScale == 0)
             {
-                StartCoroutine(ScaleTime(0,1,0.5f));
+                StartCoroutine(ScaleTime(0, 1, 0.5f));
             }
             if (Time.timeScale == 1)
             {
