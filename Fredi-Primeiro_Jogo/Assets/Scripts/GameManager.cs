@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public int maxHazardsToSpawn = 4;
 
     public TMPro.TextMeshProUGUI scoreText;
+
+    public Image backGroundMenu;
 
 
     private int score;
@@ -36,10 +39,12 @@ public class GameManager : MonoBehaviour
             if(Time.timeScale == 0)
             {
                 StartCoroutine(ScaleTime(0, 1, 0.5f));
+                backGroundMenu.gameObject.SetActive(false);
             }
             if (Time.timeScale == 1)
             {
                 StartCoroutine(ScaleTime(1, 0, 0.5f));
+                backGroundMenu.gameObject.SetActive(true);
             }
         }
 
