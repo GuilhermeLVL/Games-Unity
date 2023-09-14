@@ -20,10 +20,17 @@ public class GameManager : MonoBehaviour
     private float timer;
     private static bool gameOver;
 
-  
 
+    public void Enabled()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private static GameManager instance;
+    public static GameManager Instance => instance;
     void Start()
     {
+        instance = this;
 
        StartCoroutine(SpawnHazards());
         
@@ -106,4 +113,6 @@ public class GameManager : MonoBehaviour
     {
         gameOver = true;
     }
+
+    
 }
