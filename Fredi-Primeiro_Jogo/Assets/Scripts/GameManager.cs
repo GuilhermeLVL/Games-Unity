@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public TMPro.TextMeshProUGUI scoreText;
 
+    public GameObject player;
+
     public Image backGroundMenu;
 
     public GameObject mainVcam;
@@ -35,6 +37,15 @@ public class GameManager : MonoBehaviour
 
        StartCoroutine(SpawnHazards());
         
+    }
+
+    private void OnEnable()
+    {
+        player.SetActive(true);
+
+        mainVcam.SetActive(true);
+        zoomVcam.SetActive(false);
+
     }
 
 
