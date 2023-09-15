@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private int score;
     private float timer;
     private bool gameOver;
+    private Coroutine hazardsCoroutine;
 
 
   
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-       StartCoroutine(SpawnHazards());
+       
         
     }
 
@@ -46,6 +47,12 @@ public class GameManager : MonoBehaviour
         mainVcam.SetActive(true);
         zoomVcam.SetActive(false);
 
+        gameOver = false;
+        scoreText.text = "0";
+        score = 0;
+        timer = 0;
+
+        hazardsCoroutine = StartCoroutine(SpawnHazards());
     }
 
 
@@ -123,6 +130,8 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+
+        StopCoroutine(hazardsCoroutine);
         gameOver = true;
 
         mainVcam.SetActive(false);
