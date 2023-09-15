@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
    
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
         CinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
@@ -45,6 +45,15 @@ public class Player : MonoBehaviour
 
 
     }
+
+    private void OnEnable()
+    {
+        transform.position = new Vector3(0, 0.75f, 0);
+        rb.velocity = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("hazard"))
