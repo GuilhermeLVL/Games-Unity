@@ -15,16 +15,17 @@ public class GameManager : MonoBehaviour
 
     public Image backGroundMenu;
 
+    public GameObject mainVcam;
+    public GameObject zoomVcam;
+
+    public GameObject gameOverMenu;
 
     private int score;
     private float timer;
-    private static bool gameOver;
+    private bool gameOver;
 
 
-    public void Enabled()
-    {
-        gameObject.SetActive(true);
-    }
+  
 
     private static GameManager instance;
     public static GameManager Instance => instance;
@@ -109,10 +110,20 @@ public class GameManager : MonoBehaviour
         yield return SpawnHazards();
     }
 
-    public static void GameOver()
+    public void GameOver()
     {
         gameOver = true;
+
+        mainVcam.SetActive(false);
+        zoomVcam.SetActive(true);
+
+        gameObject.SetActive(false);
+        gameOverMenu.SetActive(true);
     }
 
-    
+    public void Enabled()
+    {
+        gameObject.SetActive(true);
+    }
+
 }
