@@ -14,6 +14,6 @@ public class GmaeOverMenu : MonoBehaviour
 
     public void Quit()
     {
-
+        Application.Quit();
     }
 }
