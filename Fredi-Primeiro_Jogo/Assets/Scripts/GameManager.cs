@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject gameOverMenu;
 
+
+    private int highScore;
     private int score;
     private float timer;
     private bool gameOver;
@@ -32,10 +34,13 @@ public class GameManager : MonoBehaviour
   
 
     private static GameManager instance;
+    private const string HighScorePrefeceKey = "HighScore";
+
     public static GameManager Instance => instance;
     void Start()
     {
         instance = this;
+        highScore = PlayerPrefs.GetInt(HighScorePrefeceKey);
 
        
         
@@ -140,6 +145,13 @@ public class GameManager : MonoBehaviour
         if (Time.timeScale < 1)
         {
             UnPause();
+        }
+
+        if(score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetInt(HighScorePrefeceKey, highScore);
+
         }
 
         mainVcam.SetActive(false);
