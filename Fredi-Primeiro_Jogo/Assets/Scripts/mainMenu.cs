@@ -8,10 +8,15 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
 
+
     public GameManager gameManager;
+
+    [SerializeField]
+    private RectTransform scoreReactTransform;
 
     private void Start()
     {
+        scoreReactTransform.anchoredPosition = new Vector2 (scoreReactTransform.anchoredPosition.x,0 );
         GetComponentInChildren<TMPro.TextMeshProUGUI>().gameObject.LeanScale(new Vector3(1.2f, 1.2f), 0.3f).setLoopPingPong();
     }
     public void Play()
@@ -22,6 +27,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void onComplete()
     {
+
+        scoreReactTransform.LeanMoveY(-72, 0.75f).setEaseOutBounce();
         gameManager.Enabled();
         Destroy(gameObject);
     }

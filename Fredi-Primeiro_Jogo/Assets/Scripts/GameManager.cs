@@ -42,9 +42,8 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        
-        player.SetActive(true);
 
+        player.SetActive(true);
         mainVcam.SetActive(true);
         zoomVcam.SetActive(false);
 
