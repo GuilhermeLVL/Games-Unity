@@ -7,7 +7,8 @@ public class hazard : MonoBehaviour
 {
     Vector3 rotation;
 
-    public ParticleSystem breakingEffect;
+    [SerializeField]
+    private ParticleSystem breakingEffect;
     private CinemachineImpulseSource CinemachineImpulseSource;
     private Player Player;
 

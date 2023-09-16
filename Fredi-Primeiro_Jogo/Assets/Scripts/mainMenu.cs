@@ -8,8 +8,8 @@ public class NewBehaviourScript : MonoBehaviour
 {
 
 
-
-    public GameManager gameManager;
+    [SerializeField]
+    private GameManager gameManager;
 
     [SerializeField]
     private RectTransform scoreReactTransform;

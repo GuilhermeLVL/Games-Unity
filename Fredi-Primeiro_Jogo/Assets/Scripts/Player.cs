@@ -5,9 +5,13 @@ using Cinemachine;
 
 public class Player : MonoBehaviour
 {
-    public float forceMultiplier = 3f;
-    public float maximumVelocity = 3f;
-    public ParticleSystem deathParticles;
+
+    [SerializeField]
+    private float forceMultiplier = 3f;
+    [SerializeField]
+    private float maximumVelocity = 3f;
+    [SerializeField]
+    private ParticleSystem deathParticles;
 
     private Rigidbody rb;
 
