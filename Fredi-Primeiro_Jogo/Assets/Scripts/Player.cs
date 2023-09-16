@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("hazard"))
         {
-            GameManager.Instance.GameOver();
+            GameOver();
             Instantiate(deathParticles, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
 
@@ -72,5 +72,20 @@ public class Player : MonoBehaviour
             //Desabilitando a camera que segue e habilitando a camera de morte/zom
            
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("falldown"))
+        {
+            GameOver();
+        }
+    }
+
+    
+
+    private void GameOver()
+    {
+        GameManager.Instance.GameOver();
+        gameObject.SetActive(false);
     }
 }
