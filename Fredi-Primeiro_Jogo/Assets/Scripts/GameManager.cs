@@ -64,12 +64,14 @@ public class GameManager : MonoBehaviour
         {
             if(Time.timeScale == 0)
             {
-                StartCoroutine(ScaleTime(0, 1, 0.5f));
+                LeanTween.value(0, 1, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
+                //StartCoroutine(ScaleTime(0, 1, 0.5f));
                 backGroundMenu.gameObject.SetActive(false);
             }
             if (Time.timeScale == 1)
             {
-                StartCoroutine(ScaleTime(1, 0, 0.5f));
+                LeanTween.value(1, 0, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
+                //StartCoroutine(ScaleTime(1, 0, 0.5f));
                 backGroundMenu.gameObject.SetActive(true);
             }
         }
@@ -89,23 +91,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-  
-
-    IEnumerator ScaleTime(float start, float end, float duration)
+    private void SetTimeScale(float value)
     {
-        float lastTime = Time.realtimeSinceStartup;
-        float timer = 0.0f;
-        while (timer < duration)
-        {
-            Time.timeScale = Mathf.Lerp(start, end, timer / duration);
-            Time.fixedDeltaTime = 0.02f * Time.timeScale;
-            timer += (Time.realtimeSinceStartup - lastTime);
-            lastTime = Time.realtimeSinceStartup;
-            yield return null;
-        }
-        Time.timeScale = end;
-        Time.fixedDeltaTime = 0.02f * end;
+        Time.timeScale = value;
+        Time.fixedDeltaTime = 0.02f * value;
     }
+
+   
 
     private IEnumerator SpawnHazards()
     {
