@@ -12,7 +12,7 @@ public class GmaeOverMenu : MonoBehaviour
 
         rectTransform.anchoredPosition = new Vector2(0, rectTransform.rect.height);
 
-        rectTransform.LeanMoveY(0, 1f);
+        rectTransform.LeanMoveY(0, 1f).setEaseOutElastic().delay = 0.5f;
 
     }
 
