@@ -5,22 +5,23 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
 
-    public GameObject hazardPrefab;
-
-    public int maxHazardsToSpawn = 4;
-
-    public TMPro.TextMeshProUGUI scoreText;
-
-    public GameObject player;
-
-    public Image backGroundMenu;
-
-    public GameObject mainVcam;
-    public GameObject zoomVcam;
-
-    public GameObject gameOverMenu;
+    [SerializeField]
+    private GameObject hazardPrefab;
+    [SerializeField]
+    private int maxHazardsToSpawn = 4;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI scoreText;
+    [SerializeField]
+    private GameObject player;
+    [SerializeField]
+    private Image backGroundMenu;
+    [SerializeField]
+    private GameObject mainVcam;
+    [SerializeField]
+    private GameObject zoomVcam;
+    [SerializeField]
+    private GameObject gameOverMenu;
 
     private int score;
     private float timer;
@@ -64,15 +65,11 @@ public class GameManager : MonoBehaviour
         {
             if(Time.timeScale == 0)
             {
-                LeanTween.value(0, 1, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
-                //StartCoroutine(ScaleTime(0, 1, 0.5f));
-                backGroundMenu.gameObject.SetActive(false);
+                UnPause();
             }
             if (Time.timeScale == 1)
             {
-                LeanTween.value(1, 0, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
-                //StartCoroutine(ScaleTime(1, 0, 0.5f));
-                backGroundMenu.gameObject.SetActive(true);
+                Pause();
             }
         }
 
@@ -89,6 +86,20 @@ public class GameManager : MonoBehaviour
 
             timer = 0;
         }
+    }
+
+    private void Pause()
+    {
+        LeanTween.value(1, 0, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
+        //StartCoroutine(ScaleTime(1, 0, 0.5f));
+        backGroundMenu.gameObject.SetActive(true);
+    }
+
+    private void UnPause()
+    {
+        LeanTween.value(0, 1, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
+        //StartCoroutine(ScaleTime(0, 1, 0.5f));
+        backGroundMenu.gameObject.SetActive(false);
     }
 
     private void SetTimeScale(float value)
@@ -128,9 +139,7 @@ public class GameManager : MonoBehaviour
 
         if (Time.timeScale < 1)
         {
-            LeanTween.value(Time.timeScale, 1, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
-            //StartCoroutine(ScaleTime(0, 1, 0.5f));
-            backGroundMenu.gameObject.SetActive(false);
+            UnPause();
         }
 
         mainVcam.SetActive(false);
