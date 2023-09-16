@@ -126,6 +126,13 @@ public class GameManager : MonoBehaviour
         StopCoroutine(hazardsCoroutine);
         gameOver = true;
 
+        if (Time.timeScale < 1)
+        {
+            LeanTween.value(Time.timeScale, 1, 0.75f).setOnUpdate(SetTimeScale).setIgnoreTimeScale(true);
+            //StartCoroutine(ScaleTime(0, 1, 0.5f));
+            backGroundMenu.gameObject.SetActive(false);
+        }
+
         mainVcam.SetActive(false);
         zoomVcam.SetActive(true);
 
