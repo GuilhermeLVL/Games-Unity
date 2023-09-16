@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     private const string HighScorePrefeceKey = "HighScore";
 
     public static GameManager Instance => instance;
+
+    public int HighScore => highScore;
     void Start()
     {
         instance = this;

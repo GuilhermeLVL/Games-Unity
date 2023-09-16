@@ -8,8 +8,15 @@ public class GmaeOverMenu : MonoBehaviour
 
     private LTDescr RestartAnimation;
 
+    [SerializeField]
+    private TMPro.TextMeshProUGUI higScore;
+
     private void OnEnable()
     {
+
+        higScore.text = $"High Score: {GameManager.Instance.HighScore}";
+
+
         var rectTransform = GetComponent<RectTransform>();
 
         rectTransform.anchoredPosition = new Vector2(0, rectTransform.rect.height);

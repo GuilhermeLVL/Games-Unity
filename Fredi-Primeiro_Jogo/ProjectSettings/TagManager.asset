@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - hazard
+  - falldown
   layers:
   - Default
   - TransparentFX
