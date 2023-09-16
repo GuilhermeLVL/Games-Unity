@@ -6,6 +6,8 @@ using UnityEditor;
 public class GmaeOverMenu : MonoBehaviour
 {
 
+    private LTDescr RestartAnimation;
+
     private void OnEnable()
     {
         var rectTransform = GetComponent<RectTransform>();
@@ -14,10 +16,17 @@ public class GmaeOverMenu : MonoBehaviour
 
         rectTransform.LeanMoveY(0, 1f).setEaseOutElastic().delay = 0.5f;
 
+        if (RestartAnimation is null) { 
+        
+         RestartAnimation =  GetComponentInChildren<TMPro.TextMeshProUGUI>().gameObject.LeanScale(new Vector3(1.2f, 1.2f), 0.3f).setLoopPingPong();
+        }
+        RestartAnimation.resume();
+
     }
 
     public void Restart()
     {
+        RestartAnimation.pause();
         gameObject.SetActive(false);
         GameManager.Instance.Enabled();
     }
