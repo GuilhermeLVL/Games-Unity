@@ -1,0 +1,5 @@
+C:/Users/l-0-l/Documents/GitHub/Games-Unity/Fredi-Primeiro_Jogo/.utmp/Debug/1bs2a25k/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/l-0-l/Documents/GitHub/Games-Unity/Fredi-Primeiro_Jogo/.utmp/Debug/1bs2a25k/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/l-0-l/Documents/GitHub/Games-Unity/Fredi-Primeiro_Jogo/.utmp/Debug/1bs2a25k/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Users/l-0-l/Documents/GitHub/Games-Unity/Fredi-Primeiro_Jogo/.utmp/Debug/1bs2a25k/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Users/l-0-l/Documents/GitHub/Games-Unity/Fredi-Primeiro_Jogo/.utmp/Debug/1bs2a25k/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

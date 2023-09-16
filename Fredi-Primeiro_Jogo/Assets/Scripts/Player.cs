@@ -39,11 +39,30 @@ public class Player : MonoBehaviour
             return;
         }
 
-        var HorizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = 0;
+
+        if (Input.GetMouseButton(0))
+        {
+            var center = Screen.width / 2;
+            var mouseposition = Input.mousePosition;
+
+            if (mouseposition.x > center)
+            {
+                horizontalInput = 1;
+            }
+            else if (mouseposition.x < center)
+            {
+                horizontalInput = -1;
+            }
+        }
+        else 
+        { 
+         var HorizontalInput = Input.GetAxis("Horizontal");
+        }
+       
         if (rb.velocity.magnitude <= maximumVelocity )
         {
-            rb.AddForce(new Vector3(HorizontalInput * forceMultiplier * Time.deltaTime,0,0));
-           
+            rb.AddForce(new Vector3(horizontalInput * forceMultiplier * Time.deltaTime,0,0));
 
         }
 
