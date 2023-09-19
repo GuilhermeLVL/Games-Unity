@@ -16,8 +16,11 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) == true)
+        {
 
+            MyRigidBody.velocity = Vector2.up * 10;
         
-        MyRigidBody.velocity = Vector2.up * 10;
+        }
     }
 }
