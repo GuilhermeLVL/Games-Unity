@@ -223,3 +223,8 @@ Received Import Request.
 Start importing Assets/Assets/unitytut-pipe.png using Guid(b55016c5decdf124ea1e908b755f0db8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54243ac715ecf9e70a1e9fd215754f59') in 0.019228 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: A operação de E/S foi anulada devido a uma saída de thread ou a uma requisição de aplicativo.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
