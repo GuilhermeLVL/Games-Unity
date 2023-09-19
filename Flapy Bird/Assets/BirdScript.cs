@@ -6,6 +6,7 @@ public class BirdScript : MonoBehaviour
 {
 
     public Rigidbody2D MyRigidBody;
+    public float FlapStrength;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class BirdScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) == true)
         {
 
-            MyRigidBody.velocity = Vector2.up * 10;
+            MyRigidBody.velocity = Vector2.up * FlapStrength;
         
         }
     }
