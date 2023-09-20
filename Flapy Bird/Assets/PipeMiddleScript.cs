@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
+//Gambiarra para ter acionar o metodo  addScore() do Script LogicScript
+//Esse metodo e responsavel pelos pontos do jogador;
 
     public LogicScript logic;
-    // Start is called before the first frame update
+    
+
+
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();

@@ -11,6 +11,7 @@ public class LogicScript : MonoBehaviour
 {
     public int playerScore;
     public Text scoreText;
+    public GameObject gameOverScreen;
 
     
 
@@ -26,6 +27,7 @@ public class LogicScript : MonoBehaviour
     {
         playerScore = playerScore + 1;
         scoreText.text = playerScore.ToString() ;
+       
     }
 
     //Permite que o jogo possa ser reiniciado apos o GameOver
@@ -33,5 +35,8 @@ public class LogicScript : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
 }
