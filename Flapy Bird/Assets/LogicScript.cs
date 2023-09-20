@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+//Bibliotrcas importadas
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class LogicScript : MonoBehaviour
 {
@@ -24,5 +28,10 @@ public class LogicScript : MonoBehaviour
         scoreText.text = playerScore.ToString() ;
     }
 
+    //Permite que o jogo possa ser reiniciado apos o GameOver
+    public void restartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }
