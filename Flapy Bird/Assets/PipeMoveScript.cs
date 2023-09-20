@@ -18,7 +18,8 @@ public class PipeMoveScript : MonoBehaviour
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
     
 
-        //Se a posicao do pipe for men
+        //Se a posicao do pipe for menor que a deadZone= -45
+        //O prefab se destruira
         if(transform.position.x < deadZone)
         {
             Destroy(gameObject);
