@@ -14,13 +14,16 @@ public class PipeSpawScript : MonoBehaviour
     {
         SpawPoint();
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
 
-   
-     if (timer <= spawRate)
+        //  **No primeiro frame**
+
+        // Timer comeca sendo menor que spawRate, Caindo no (if)
+        // mas passsa a ter o valor da taxa de atualizacao, Caindo no (Else)
+        if (timer <= spawRate)
         {
             timer = timer + Time.deltaTime;
         }
