@@ -218,3 +218,73 @@ Received Import Request.
 Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd058efe770d4363cd9b8cfb21ce250') in 0.000313 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 418.372136 seconds.
+  path: Assets/MainScene.unity
+  artifactKey: Guid(cdde6cfef0fd1194787c2afdae4506d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainScene.unity using Guid(cdde6cfef0fd1194787c2afdae4506d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec8b4e2975508add1975e25760579e6') in 0.000382 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 7.951578 seconds.
+  path: Assets/MainScene 1.unity
+  artifactKey: Guid(ed117cdd7f5c8d34694904714d89cfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MainScene 1.unity using Guid(ed117cdd7f5c8d34694904714d89cfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d9528d26390989bee34bca84647e35') in 0.000346 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.618642 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(45a7133f2831286449b9db5da08b6229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(45a7133f2831286449b9db5da08b6229) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3ae9f663c9546adcec6eb35aaf60928') in 0.000331 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 497.279463 seconds.
+  path: Assets/New Material.mat
+  artifactKey: Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6862c74eb9d7cb2aa13e2cb24ddba7e8') in 0.088616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 16.999417 seconds.
+  path: Assets/gROUND.mat
+  artifactKey: Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/gROUND.mat using Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0775d92fdbdb37595fdbba4fc5a7dc1d') in 0.008854 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 10.600623 seconds.
+  path: Assets/Ground.mat
+  artifactKey: Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground.mat using Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea117a682a9272eb0af4323e0376aa47') in 0.008675 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 164.145247 seconds.
+  path: Assets/Ground.mat
+  artifactKey: Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ground.mat using Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c652776dc4c4e1bbf10d787ae7676e7') in 0.009065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 739.475795 seconds.
+  path: Assets/Ground.mat
+  artifactKey: Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Ground.mat using Guid(ab8596442bcd7f74da05f83f4fc211e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bce142eccd00709e68c4d83102e7b4c2') in 0.093965 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: A operação de E/S foi anulada devido a uma saída de thread ou a uma requisição de aplicativo.
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
