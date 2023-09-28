@@ -14,13 +14,16 @@ public class WaveSpawner : MonoBehaviour
     private float countdown = 2f;
 
     //Numero da rodada
-    private int waveNumber = 1;
+    private int waveNumber = 0;
 
     private void Update()
     {
+
+        
+
         if (countdown <= 0f)
         {
-            SpawnWave();
+            StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
 
@@ -31,6 +34,11 @@ public class WaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+
+        //Acrescenta +1 ao numero da partida
+        waveNumber++;
+
+
         //Quanto maior for o level + Vezes a funcao SpawnEnemy() sera chamada
         //Gerando a cada lvl uma quantidade maior de inimigos
 
@@ -42,8 +50,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
-        //Acrescenta +1 ao numero da partida
-        waveNumber++;
+        
     }
 
     void SpawnEnemy()
