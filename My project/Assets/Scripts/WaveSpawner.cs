@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -8,10 +9,13 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnPoint;
 
+    //TEMPO ENTRE AS WAVES
     public float timeBetweenWaves = 5f;
 
     //Tempo para o Spawn Das Waves
     private float countdown = 2f;
+
+    public Text WaveCount;
 
     //Numero da rodada
     private int waveNumber = 0;
@@ -28,6 +32,9 @@ public class WaveSpawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
+
+        //Passa o valor para string, limita as casas decimais e passa o valor para var waveCount
+        WaveCount.text = Mathf.Round(countdown).ToString();
     }
 
     //Ienumerator e uma ko-rotina um trecho de codigo que e executado em outro tempo
@@ -37,6 +44,8 @@ public class WaveSpawner : MonoBehaviour
 
         //Acrescenta +1 ao numero da partida
         waveNumber++;
+
+        
 
 
         //Quanto maior for o level + Vezes a funcao SpawnEnemy() sera chamada
