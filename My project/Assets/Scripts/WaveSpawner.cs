@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -28,7 +27,9 @@ public class WaveSpawner : MonoBehaviour
         countdown -= Time.deltaTime;
     }
 
-    void SpawnWave()
+    //Ienumerator e uma ko-rotina um trecho de codigo que e executado em outro tempo
+
+    IEnumerator SpawnWave()
     {
         //Quanto maior for o level + Vezes a funcao SpawnEnemy() sera chamada
         //Gerando a cada lvl uma quantidade maior de inimigos
@@ -36,6 +37,9 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < waveNumber; i++) 
         {
             SpawnEnemy();
+
+            //Definindo um tempo de espera
+            yield return new WaitForSeconds(0.5f);
         }
 
         //Acrescenta +1 ao numero da partida
