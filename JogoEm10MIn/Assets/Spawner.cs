@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Spawner : MonoBehaviour
+{
+    public float spawRate = 1f;
+
+    public GameObject hexagonPrefab;
+
+    private float nextTimeToSpawn = 0f;
+   
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
