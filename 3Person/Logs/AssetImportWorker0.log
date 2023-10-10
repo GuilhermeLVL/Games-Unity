@@ -178,3 +178,43 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 9571.468949 seconds.
+  path: Assets/industrial_zone/scene_day.unity
+  artifactKey: Guid(3c85631d2ba904143b4fbabddec718d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/industrial_zone/scene_day.unity using Guid(3c85631d2ba904143b4fbabddec718d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e0a6d10a42f7e1ea9084072f2c03c1') in 0.002207 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 49.478796 seconds.
+  path: Assets/Scenes/scene_night.unity
+  artifactKey: Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/scene_night.unity using Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38257956906cc00b7ab9877039430fb1') in 0.000350 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 236.683169 seconds.
+  path: Assets/Scenes/scene_night.unity
+  artifactKey: Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/scene_night.unity using Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c0e674ba7de45c3c855f44938ef1c3a') in 0.000386 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.962203 seconds.
+  path: Assets/Scenes/mission1.unity
+  artifactKey: Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/mission1.unity using Guid(782f1cb7aafe83540be8e318f12196c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37cadf3551db2f3cc9b1fc484f3bca28') in 0.000344 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.061178 seconds.
+  path: Assets/Scenes/scene_nightSettings.lighting
+  artifactKey: Guid(a9e0c3bf4b7396740917a875f4fd05eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/scene_nightSettings.lighting using Guid(a9e0c3bf4b7396740917a875f4fd05eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152c6e950e915b74b2a630410ca29b2c') in 0.007249 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
