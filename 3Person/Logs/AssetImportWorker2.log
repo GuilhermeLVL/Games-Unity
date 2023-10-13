@@ -9,11 +9,11 @@ C:\Program Files\Unity 2022.3.10f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker2
 -projectPath
 C:/Users/l-0-l/Documents/GitHub/Games-Unity/3Person
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker2.log
 -srvPort
 54153
 Successfully changed project path to: C:/Users/l-0-l/Documents/GitHub/Games-Unity/3Person
@@ -49,12 +49,12 @@ C:/Users/l-0-l/Documents/GitHub/Games-Unity/3Person
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [9112] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 1642240063 [EditorId] 1642240063 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LLJV8VC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [12476] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 4222744948 [EditorId] 4222744948 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LLJV8VC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [9112] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 1642240063 [EditorId] 1642240063 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LLJV8VC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [12476] Host "[IP] 192.168.0.103 [Port] 0 [Flags] 2 [Guid] 4222744948 [EditorId] 4222744948 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-LLJV8VC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 8.26 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 8.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -70,43 +70,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56784
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56460
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006565 seconds.
-- Loaded All Assemblies, in  0.319 seconds
+Registered in 0.006969 seconds.
+- Loaded All Assemblies, in  0.315 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.222 seconds
-Domain Reload Profiling: 539ms
-	BeginReloadAssembly (97ms)
+- Finished resetting the current domain, in  0.225 seconds
+Domain Reload Profiling: 538ms
+	BeginReloadAssembly (93ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
+	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (130ms)
-		LoadAssemblies (95ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (127ms)
+		LoadAssemblies (91ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (129ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (115ms)
+		AnalyzeDomain (126ms)
+			TypeCache.Refresh (124ms)
+				TypeCache.ScanAssembly (114ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (223ms)
+	FinalizeReload (226ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (172ms)
+		SetupLoadedEditorAssemblies (173ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (8ms)
 			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (112ms)
+			ProcessInitializeOnLoadAttributes (114ms)
 			ProcessInitializeOnLoadMethodAttributes (44ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 539ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.586 seconds
-Refreshing native plugins compatible for Editor in 2.78 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.581 seconds
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.513 seconds
-Domain Reload Profiling: 1096ms
-	BeginReloadAssembly (141ms)
+- Finished resetting the current domain, in  0.487 seconds
+Domain Reload Profiling: 1066ms
+	BeginReloadAssembly (140ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (359ms)
-		LoadAssemblies (263ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (351ms)
+		LoadAssemblies (267ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (177ms)
-			TypeCache.Refresh (156ms)
-				TypeCache.ScanAssembly (141ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
+		AnalyzeDomain (165ms)
+			TypeCache.Refresh (151ms)
+				TypeCache.ScanAssembly (139ms)
+			ScanForSourceGeneratedMonoScriptInfo (10ms)
 			ResolveRequiredComponents (3ms)
-	FinalizeReload (514ms)
+	FinalizeReload (487ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (382ms)
+		SetupLoadedEditorAssemblies (364ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (61ms)
+			BeforeProcessingInitializeOnLoad (57ms)
 			ProcessInitializeOnLoadAttributes (279ms)
-			ProcessInitializeOnLoadMethodAttributes (22ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			ProcessInitializeOnLoadMethodAttributes (15ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 3.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3069 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 31 unused Assets / (56.4 KB). Loaded Objects now: 3536.
-Memory consumption went from 114.8 MB to 114.8 MB.
-Total: 3.531900 ms (FindLiveObjects: 0.334700 ms CreateObjectMapping: 0.175600 ms MarkObjects: 2.935600 ms  DeleteObjects: 0.085100 ms)
+Memory consumption went from 114.8 MB to 114.7 MB.
+Total: 2.865300 ms (FindLiveObjects: 0.317000 ms CreateObjectMapping: 0.099200 ms MarkObjects: 2.368000 ms  DeleteObjects: 0.080200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -178,41 +178,49 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 25899.079504 seconds.
-  path: Assets/Audio/Objective Complete.wav
-  artifactKey: Guid(af009b7dcfae6554d93200fe45ea4c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/Objective Complete.wav using Guid(af009b7dcfae6554d93200fe45ea4c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ef6d317ae22a38a502e2c9857e0a13') in 0.085024 seconds
+  Time since last request: 25899.059513 seconds.
+  path: Assets/Audio/Gun Machine Gun 434.mp3
+  artifactKey: Guid(5a2e958ae4c25624b847570a44317fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Gun Machine Gun 434.mp3 using Guid(5a2e958ae4c25624b847570a44317fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5751d0eccf7d97ed648285233b082d63') in 0.092793 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Audio/Reloading.mp3
-  artifactKey: Guid(802275865a7950a4a9ed2935e2110036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/Reloading.mp3 using Guid(802275865a7950a4a9ed2935e2110036) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cd8710ad782919b22ddd3ed2b3898bc') in 0.010990 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Audio/AmmoOut.wav
-  artifactKey: Guid(5e9148c962333254f8cd4687fa87e36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/AmmoOut.wav using Guid(5e9148c962333254f8cd4687fa87e36e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da18382d8cdc8239ebb4140e66c3bb73') in 0.009689 seconds
+  Time since last request: 0.000022 seconds.
+  path: Assets/Audio/AmmoPickup.mp3
+  artifactKey: Guid(f016fed6245be9844b8428c631a9a220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/AmmoPickup.mp3 using Guid(f016fed6245be9844b8428c631a9a220) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549ccaaf91a4759debbe1cb96111b011') in 0.009594 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
   Time since last request: 0.000012 seconds.
-  path: Assets/Audio/drone.mp3
-  artifactKey: Guid(6a9b237191b186943832a152ae967381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/drone.mp3 using Guid(6a9b237191b186943832a152ae967381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0326d4944090ecf0331f7eebfc8ff21f') in 0.009283 seconds
+  path: Assets/Audio/FlameThrower.mp3
+  artifactKey: Guid(7f3964aebf9294043b5b2834795ab518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/FlameThrower.mp3 using Guid(7f3964aebf9294043b5b2834795ab518) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a412ff7269887de98365076d731da43d') in 0.011350 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Audio/HealthPickup.mp3
-  artifactKey: Guid(125a341f5a7e3374a97a25db8196922a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Audio/HealthPickup.mp3 using Guid(125a341f5a7e3374a97a25db8196922a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '968934925e363a5412bcd4e4700e075f') in 0.008956 seconds
+  Time since last request: 0.000014 seconds.
+  path: Assets/Audio/Door.mp3
+  artifactKey: Guid(8e684b6d39fb10b48b97275c80a22829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Door.mp3 using Guid(8e684b6d39fb10b48b97275c80a22829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a476114b09901c3332f61f2f2c972693') in 0.010248 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Audio/PlayerHurt.wav
+  artifactKey: Guid(4694f6dcdc85360449c8ef8d55aae9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/PlayerHurt.wav using Guid(4694f6dcdc85360449c8ef8d55aae9e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0acf84bff0a072ee671462d7154a9427') in 0.009635 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Audio/Gun Machine Gun 353.mp3
+  artifactKey: Guid(60c4fb6b2465f244ebccae46e6c3f987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Gun Machine Gun 353.mp3 using Guid(60c4fb6b2465f244ebccae46e6c3f987) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd724e087c1d284d66099c62449744a4') in 0.009096 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
