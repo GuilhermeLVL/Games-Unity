@@ -13,6 +13,15 @@ public class NewBehaviourScript : MonoBehaviour
 
 [SerializeField] private LineRenderer oLineRenderer;
 
+[SerializeField] private Camera cameraDoJogo;
+
+
+    [SerializeField] private float forcaParaAdicionar;
+    [SerializeField] private float limiteDoArrastar;
+
+
+    private Vector3 posicaoDoMouse;
+    private bool estaArrastando;
 
    private void Start()
     {
