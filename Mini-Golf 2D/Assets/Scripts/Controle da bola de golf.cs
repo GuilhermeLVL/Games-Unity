@@ -32,6 +32,14 @@ public class NewBehaviourScript : MonoBehaviour
    
     private void Update()
     {
-        
+        pegarPosicaoDoMouse();
     }
+
+    private void pegarPosicaoDoMouse()
+    {
+        posicaoDoMouse = cameraDoJogo.ScreenToWorldPoint(Input.mousePosition);
+        posicaoDoMouse.z = 0f;
+
+    }
+
 }
