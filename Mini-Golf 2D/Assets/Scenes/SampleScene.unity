@@ -862,6 +862,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120c8e87829b95e4da80b51ef0d81185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oRigidBody2D: {fileID: 2046740746}
+  oLineRenderer: {fileID: 1367981088}
+  cameraDoJogo: {fileID: 519420031}
+  forcaParaAdicionar: 10
+  limiteDoArrastar: 3
 --- !u!4 &1367981090
 Transform:
   m_ObjectHideFlags: 0
