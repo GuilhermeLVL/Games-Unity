@@ -10,6 +10,9 @@ public class NewBehaviourScript : MonoBehaviour
  
  [SerializeField]private Rigidbody2D oRigidBody2D;
 
+
+[SerializeField] private LineRenderer oLineRenderer;
+
    private void Start()
     {
     
